@@ -72,7 +72,7 @@ class Tureng implements TurengInterface
      */
     protected function _request($word)
     {
-        $url = self::URL . urlencode($word);
+        $url = self::URL . rawurlencode($word);
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
